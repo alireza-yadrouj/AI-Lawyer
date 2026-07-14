@@ -1,75 +1,60 @@
 <!DOCTYPE html>
-
-<html lang="fa" dir="rtl" class="dark" data-theme="dark">
+<html lang="en" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lawyer-Guide</Lawyer-Guide></title>
-    <link rel="stylesheet" href="css/Lawyers-Guide.css">
+    <title>Lawyer-Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  </head>
+    <link rel="stylesheet" href="css/Lawyers-Guide.css">
+
+</head>
 
 <body>
-    <a class="icon-btn" id="theme-toggle">
-              <i class="bi bi-moon"></i>
-            </a>
-    <div class="LG-Main-Div">
+    <div>
+        <!-- =================================================
+        search box
+        =================================================== -->
+        <div class="Search-Box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search"
+                viewBox="0 0 16 16">
+                <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            </svg>
+            <input class="LG-Search-Text" type="search" placeholder=" جستجوی وکیل...">
+        </div>
 
-        <div class="LG-Header">
+        <!-- =================================================
+        card filter tab bar
+        =================================================== -->
 
-            <div class="LG-Header-Right-Group">
-                <div class="Sidebar-Icon"> </div>
-
-                <h1 class="Part-Title">راهنمای وکلا</h1>
+        <div class="LG-Tab-Bar">
+            <div class="LG-Content-Tab">
+                <p>همه</p>
             </div>
-
-            <div class="LG-Header-Left-Group">
-                <div class="AI-Link">
-                    <h2 class="AI-Text">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                            class="bi bi-stars" viewBox="0 0 16 16">
-                            <path
-                                d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" />
-                        </svg>
-                        از محامی AI بپرس
-                    </h2>
-                </div>
-                <div class="Moon-Icon"> </div>
-                <div class="Language-Icon"> </div>
-                <div class="Bell-Icon"> </div>
+            <div class="LG-Content-Tab">
+                <p>مدنی</p>
+            </div>
+            <div class="LG-Content-Tab">
+                <p>بازرگانی</p>
+            </div>
+            <div class="LG-Content-Tab">
+                <p>احوال شخصیه</p>
+            </div>
+            <div class="LG-Content-Tab">
+                <p>جزایی</p>
             </div>
         </div>
 
-        <div class="LG-Content">
-            <div class="Search-Box">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                </svg>
-                <input class="LG-Search-Text" type="search" placeholder=" جستجوی وکیل...">
-            </div>
+        <!-- =================================================
+        cards
+        =================================================== -->
 
-            <div class="LG-Tab-Bar">
-                <div class="LG-Content-Tab">
-                    <p>همه</p>
-                </div>
-                <div class="LG-Content-Tab">
-                    <p>مدنی</p>
-                </div>
-                <div class="LG-Content-Tab">
-                    <p>بازرگانی</p>
-                </div>
-                <div class="LG-Content-Tab">
-                    <p>احوال شخصیه</p>
-                </div>
-                <div class="LG-Content-Tab">
-                    <p>جزایی</p>
-                </div>
-            </div>
+        <div class="row g-4">
 
-            <div class="LG-Lawyers">
+            <div class="col-12 col-md-4">
+
                 <div class="LG-Lawyer-Card">
                     <img src="images/avatar.jpg">
                     <h3 class="LG-Lawyer-Name">
@@ -84,14 +69,14 @@
                         مدنی و بازرگانی
                     </h4>
                     <h5 class="LG_Card-Location-Year">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--gold)"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--primary)"
                             class="bi bi-geo-alt" viewBox="0 0 16 16">
                             <path
                                 d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
                             <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                         </svg>
                         سلیمانیه
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--gold)"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--primary)"
                             class="bi bi-briefcase" viewBox="0 0 16 16">
                             <path
                                 d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5" />
@@ -100,12 +85,16 @@
                     </h5>
                     <div class="rating rating-5"> <span class="LG-Rating-Number">4.8</span> </div>
                     <div class="LG-Card-Last-Block">
-                        <div class="LG-Communication-Button">
+                        <button class="LG-Communication-Button">
                             ارتباط
-                        </div>
-                        <div class="Profile" ></div>
+                        </button>
+
+                        <button class="Profile" aria-label="مشاهده پروفایل"></button>
                     </div>
                 </div>
+
+            </div>
+            <div class="col-12 col-md-4">
 
                 <div class="LG-Lawyer-Card">
                     <img src="images/avatar.jpg">
@@ -121,14 +110,14 @@
                         احوال شخصیه
                     </h4>
                     <h5 class="LG_Card-Location-Year">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--gold)"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--primary)"
                             class="bi bi-geo-alt" viewBox="0 0 16 16">
                             <path
                                 d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
                             <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                         </svg>
                         اربیل
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--gold)"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--primary)"
                             class="bi bi-briefcase" viewBox="0 0 16 16">
                             <path
                                 d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5" />
@@ -137,12 +126,17 @@
                     </h5>
                     <div class="rating rating-5"> <span class="LG-Rating-Number">4.6</span> </div>
                     <div class="LG-Card-Last-Block">
-                        <div class="LG-Communication-Button">
+                        <button class="LG-Communication-Button">
                             ارتباط
-                        </div>
-                        <div class="Profile" ></div>
+                        </button>
+
+                        <button class="Profile" aria-label="مشاهده پروفایل"></button>
                     </div>
                 </div>
+
+            </div>
+
+            <div class="col-12 col-md-4">
 
                 <div class="LG-Lawyer-Card">
                     <img src="images/avatar.jpg">
@@ -158,14 +152,14 @@
                         بازرگانی و داوری
                     </h4>
                     <h5 class="LG_Card-Location-Year">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--gold)"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--primary)"
                             class="bi bi-geo-alt" viewBox="0 0 16 16">
                             <path
                                 d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
                             <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                         </svg>
                         دهوک
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--gold)"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--primary)"
                             class="bi bi-briefcase" viewBox="0 0 16 16">
                             <path
                                 d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5" />
@@ -174,12 +168,15 @@
                     </h5>
                     <div class="rating rating-5"> <span class="LG-Rating-Number">4.9</span> </div>
                     <div class="LG-Card-Last-Block">
-                        <div class="LG-Communication-Button">
+                        <button class="LG-Communication-Button">
                             ارتباط
-                        </div>
-                        <div class="Profile" ></div>
+                        </button>
+
+                        <button class="Profile" aria-label="مشاهده پروفایل"></button>
                     </div>
                 </div>
+            </div>
+            <div class="col-12 col-md-4">
 
                 <div class="LG-Lawyer-Card">
                     <img src="images/avatar.jpg">
@@ -195,14 +192,14 @@
                         قانون اساسی و کار
                     </h4>
                     <h5 class="LG_Card-Location-Year">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--gold)"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--primary)"
                             class="bi bi-geo-alt" viewBox="0 0 16 16">
                             <path
                                 d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
                             <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                         </svg>
                         سلیمانیه
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--gold)"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--primary)"
                             class="bi bi-briefcase" viewBox="0 0 16 16">
                             <path
                                 d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5" />
@@ -211,13 +208,17 @@
                     </h5>
                     <div class="rating rating-4"> <span class="LG-Rating-Number">4.5</span> </div>
                     <div class="LG-Card-Last-Block">
-                        <div class="LG-Communication-Button">
+                        <button class="LG-Communication-Button">
                             ارتباط
-                        </div>
-                        <div class="Profile" ></div>
+                        </button>
+
+                        <button class="Profile" aria-label="مشاهده پروفایل"></button>
                     </div>
 
                 </div>
+            </div>
+
+            <div class="col-12 col-md-4">
 
                 <div class="LG-Lawyer-Card">
                     <img src="images/avatar.jpg">
@@ -233,14 +234,14 @@
                         جزایی
                     </h4>
                     <h5 class="LG_Card-Location-Year">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--gold)"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--primary)"
                             class="bi bi-geo-alt" viewBox="0 0 16 16">
                             <path
                                 d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
                             <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                         </svg>
                         اربیل
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--gold)"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--primary)"
                             class="bi bi-briefcase" viewBox="0 0 16 16">
                             <path
                                 d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5" />
@@ -249,13 +250,17 @@
                     </h5>
                     <div class="rating rating-5"> <span class="LG-Rating-Number">4.7</span> </div>
                     <div class="LG-Card-Last-Block">
-                        <div class="LG-Communication-Button">
+                        <button class="LG-Communication-Button">
                             ارتباط
-                        </div>
-                        <div class="Profile" ></div>
+                        </button>
+
+                        <button class="Profile" aria-label="مشاهده پروفایل"></button>
                     </div>
 
                 </div>
+            </div>
+
+            <div class="col-12 col-md-4">
 
                 <div class="LG-Lawyer-Card">
                     <img src="images/avatar.jpg">
@@ -271,14 +276,14 @@
                         مدنی
                     </h4>
                     <h5 class="LG_Card-Location-Year">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--gold)"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--primary)"
                             class="bi bi-geo-alt" viewBox="0 0 16 16">
                             <path
                                 d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
                             <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                         </svg>
                         کرکوک
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--gold)"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--primary)"
                             class="bi bi-briefcase" viewBox="0 0 16 16">
                             <path
                                 d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5" />
@@ -287,20 +292,20 @@
                     </h5>
                     <div class="rating rating-4"> <span class="LG-Rating-Number">4.4</span> </div>
                     <div class="LG-Card-Last-Block">
-                        <div class="LG-Communication-Button">
+                        <button class="LG-Communication-Button">
                             ارتباط
-                        </div>
-                        <div class="Profile" ></div>
+                        </button>
+
+                        <button class="Profile" aria-label="مشاهده پروفایل"></button>
                     </div>
-
                 </div>
-            </div>
-        </div>
 
+            </div>
+
+        </div>
 
     </div>
 
-    <script src="js/theme.js"></script>
 
 </body>
 
